@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 });
 const prefectureDataMap = new Map();
 rl.on("line", (lineString) => {
-  console.log(lineString);
+  // console.log(lineString);
   const columns = lineString.split(",");
   const year = parseInt(columns[0]);
   const prefecture = columns[1];
@@ -48,6 +48,7 @@ rl.on("close", () => {
   // console.log(rankingArray);
   const rankingString = rankingArray.map(([key, value]) => {
     return `${key}: ${value.popu10}=>${value.popu15} 変化率 ${value.change}`;
-
+    
   });
+  console.log(rankingString);
 });
