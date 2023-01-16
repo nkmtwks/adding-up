@@ -43,7 +43,7 @@ rl.on("close", () => {
   // console.log(prefectureDataMap);
 
   const rankingArray = Array.from(prefectureDataMap).sort((pair1, pair2) => {
-    return pair2[1].change - pair1[1].change;
+    return pair1[1].change - pair2[1].change;
   });
   // console.log(rankingArray);
   const rankingString = rankingArray.map(([key, value]) => {
